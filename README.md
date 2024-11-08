@@ -9,6 +9,11 @@ Here is the java version of PlanXSDK.
 > * Install library into your Maven's local repository by running `mvn install`
 > * Add the following Maven dependency to your project's `pom.xml`:
 ```
+    git clone https://github.com/PlanXDev/planx-sdk-core-java
+    cd planx-sdk-core-java
+    mvn install
+```
+```
     <dependency>
       <groupId>io.planckx.api</groupId>
       <artifactId>planx-sdk-core-java</artifactId>
