@@ -23,7 +23,7 @@ Here is the java version of PlanXSDK.
 ## Example Usage
 > * This example get balance information for all token accounts:
 ```java
-    String baseUrl = "http://cp-api.planx.io";
+    String baseUrl = "https://cp-api.planx.io";
     String appId = "Go to the PlanX CP website to get";
     String secretKey = "Go to the PlanX CP website to get";
     PlanXClientFactory planXClientFactory = PlanXClientFactory.newInstance(baseUrl,appId, secretKey);
