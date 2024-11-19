@@ -1,6 +1,6 @@
 package io.planx.api.model.response;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -46,7 +46,7 @@ public class ResponseGiftSourceInfo {
     /**
      * Number of tokens for a single Gift
      */
-    private BigDecimal priceAmount;
+    private String priceAmount;
     /**
      * Token name on the left
      */
@@ -58,15 +58,15 @@ public class ResponseGiftSourceInfo {
     /**
      * The amount of tokens on the left
      */
-    private BigDecimal sourceAmount;
+    private String sourceAmount;
     /**
      * The amount of tokens on the right
      */
-    private BigDecimal targetAmount;
+    private String targetAmount;
     /**
      * Service fee
      */
-    private BigDecimal serviceFee;
+    private String serviceFee;
 
     public String getPoolId() {
         return poolId;
@@ -140,11 +140,11 @@ public class ResponseGiftSourceInfo {
         this.quantity = quantity;
     }
 
-    public BigDecimal getPriceAmount() {
+    public String getPriceAmount() {
         return priceAmount;
     }
 
-    public void setPriceAmount(BigDecimal priceAmount) {
+    public void setPriceAmount(String priceAmount) {
         this.priceAmount = priceAmount;
     }
 
@@ -164,27 +164,27 @@ public class ResponseGiftSourceInfo {
         this.targetSymbol = targetSymbol;
     }
 
-    public BigDecimal getSourceAmount() {
+    public String getSourceAmount() {
         return sourceAmount;
     }
 
-    public void setSourceAmount(BigDecimal sourceAmount) {
+    public void setSourceAmount(String sourceAmount) {
         this.sourceAmount = sourceAmount;
     }
 
-    public BigDecimal getTargetAmount() {
+    public String getTargetAmount() {
         return targetAmount;
     }
 
-    public void setTargetAmount(BigDecimal targetAmount) {
+    public void setTargetAmount(String targetAmount) {
         this.targetAmount = targetAmount;
     }
 
-    public BigDecimal getServiceFee() {
+    public String getServiceFee() {
         return serviceFee;
     }
 
-    public void setServiceFee(BigDecimal serviceFee) {
+    public void setServiceFee(String serviceFee) {
         this.serviceFee = serviceFee;
     }
 }

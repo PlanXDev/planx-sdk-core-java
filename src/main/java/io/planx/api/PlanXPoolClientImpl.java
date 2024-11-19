@@ -9,7 +9,7 @@ import io.planx.api.model.response.ResponsePool;
 import io.planx.api.core.common.ApiConfiguration;
 import io.planx.api.core.common.CheckParams;
 
-import java.math.BigDecimal;
+
 import java.util.List;
 
 /**
@@ -35,7 +35,7 @@ public class PlanXPoolClientImpl extends PlanXCommonClient implements PlanXPoolC
      */
     @Override
     public ResponsePool sendPoolInfoNew(String sourceSymbol, String targetSymbol,
-                                        BigDecimal sourceAmount, BigDecimal targetAmount) {
+                                        String sourceAmount, String targetAmount) {
         RequestNewSymbolTokenPool newPool=new RequestNewSymbolTokenPool(sourceSymbol,targetSymbol,sourceAmount,targetAmount);
         CheckParams.checkObjectNotNull(newPool);
         return super.send(apiService.sendPoolInfoNew(newPool));
@@ -69,7 +69,7 @@ public class PlanXPoolClientImpl extends PlanXCommonClient implements PlanXPoolC
      */
     @Override
     public ResponsePool sendPoolCapacityChange(String poolId, String sourceSymbol,
-                                               BigDecimal sourceAmount, String capacityAction) {
+                                               String sourceAmount, String capacityAction) {
         RequestChangeCapacityPool capacity=new RequestChangeCapacityPool(poolId,sourceSymbol,sourceAmount,capacityAction);
         CheckParams.checkObjectNotNull(capacity);
         return super.send(apiService.sendPoolCapacityChange(capacity));

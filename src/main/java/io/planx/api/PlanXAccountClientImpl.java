@@ -11,7 +11,7 @@ import io.planx.api.model.response.ResponseNewOrder;
 import io.planx.api.core.common.ApiConfiguration;
 import io.planx.api.core.common.CheckParams;
 
-import java.math.BigDecimal;
+
 import java.util.List;
 
 /**
@@ -61,7 +61,7 @@ public class PlanXAccountClientImpl extends PlanXCommonClient implements PlanXAc
      */
     @Override
     public ResponseNewOrder sendAccountMarketInvest(String externalOrderId, String sourceSymbol, String targetSymbol,
-                                                    BigDecimal targetAmount) {
+                                                    String targetAmount) {
         RequestNewInvestmentOrder investmentOrder = new RequestNewInvestmentOrder(externalOrderId, sourceSymbol, targetSymbol, targetAmount);
         CheckParams.checkObjectNotNull(investmentOrder);
         return super.send(apiService.sendAccountMarketInvest(investmentOrder));

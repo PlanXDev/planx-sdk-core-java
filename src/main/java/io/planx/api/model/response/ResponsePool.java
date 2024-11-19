@@ -1,6 +1,6 @@
 package io.planx.api.model.response;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -26,31 +26,36 @@ public class ResponsePool {
     /**
      * The original amount of tokens on the left
      */
-    private BigDecimal sourceOriginalAmount;
+    private String sourceOriginalAmount;
     /**
      * The original amount of tokens on the right
      */
-    private BigDecimal targetOriginalAmount;
+    private String targetOriginalAmount;
     /**
      * The amount of tokens on the left
      */
-    private BigDecimal sourceAmount;
+    private String sourceAmount;
     /**
      * The amount of tokens on the right
      */
-    private BigDecimal targetAmount;
+    private String targetAmount;
     /**
      * The amount of tokens used on the left
      */
-    private BigDecimal sourceDealAmount;
+    private String sourceDealAmount;
     /**
      * The amount of tokens used on the right
      */
-    private BigDecimal targetDealAmount;
+    private String targetDealAmount;
     /**
      * Pool status [ApiVars.POOL_STATUS_ACTIVE,ApiVars.POOL_STATUS_INACTIVE,ApiVars.POOL_STATUS_DESTROY]
      */
-    private BigDecimal poolStatus;
+    private String poolStatus;
+
+    /**
+     * The 10-digit second-level timestamp of this operation
+     */
+    private Long createTime;
 
     public String getPoolId() {
         return poolId;
@@ -84,59 +89,67 @@ public class ResponsePool {
         this.targetSymbol = targetSymbol;
     }
 
-    public BigDecimal getSourceOriginalAmount() {
+    public String getSourceOriginalAmount() {
         return sourceOriginalAmount;
     }
 
-    public void setSourceOriginalAmount(BigDecimal sourceOriginalAmount) {
+    public void setSourceOriginalAmount(String sourceOriginalAmount) {
         this.sourceOriginalAmount = sourceOriginalAmount;
     }
 
-    public BigDecimal getTargetOriginalAmount() {
+    public String getTargetOriginalAmount() {
         return targetOriginalAmount;
     }
 
-    public void setTargetOriginalAmount(BigDecimal targetOriginalAmount) {
+    public void setTargetOriginalAmount(String targetOriginalAmount) {
         this.targetOriginalAmount = targetOriginalAmount;
     }
 
-    public BigDecimal getSourceAmount() {
+    public String getSourceAmount() {
         return sourceAmount;
     }
 
-    public void setSourceAmount(BigDecimal sourceAmount) {
+    public void setSourceAmount(String sourceAmount) {
         this.sourceAmount = sourceAmount;
     }
 
-    public BigDecimal getTargetAmount() {
+    public String getTargetAmount() {
         return targetAmount;
     }
 
-    public void setTargetAmount(BigDecimal targetAmount) {
+    public void setTargetAmount(String targetAmount) {
         this.targetAmount = targetAmount;
     }
 
-    public BigDecimal getSourceDealAmount() {
+    public String getSourceDealAmount() {
         return sourceDealAmount;
     }
 
-    public void setSourceDealAmount(BigDecimal sourceDealAmount) {
+    public void setSourceDealAmount(String sourceDealAmount) {
         this.sourceDealAmount = sourceDealAmount;
     }
 
-    public BigDecimal getTargetDealAmount() {
+    public String getTargetDealAmount() {
         return targetDealAmount;
     }
 
-    public void setTargetDealAmount(BigDecimal targetDealAmount) {
+    public void setTargetDealAmount(String targetDealAmount) {
         this.targetDealAmount = targetDealAmount;
     }
 
-    public BigDecimal getPoolStatus() {
+    public String getPoolStatus() {
         return poolStatus;
     }
 
-    public void setPoolStatus(BigDecimal poolStatus) {
+    public void setPoolStatus(String poolStatus) {
         this.poolStatus = poolStatus;
+    }
+
+    public Long getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 }

@@ -5,7 +5,7 @@ import io.planx.api.core.annotation.Min;
 import io.planx.api.core.annotation.NotBlank;
 import io.planx.api.core.annotation.NotNull;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -27,7 +27,7 @@ public class RequestChangeCapacityPool {
      */
     @NotNull
     @Min(eq = false)
-    private BigDecimal sourceAmount;
+    private String sourceAmount;
     /**
      * Capacity action [ApiVars.POOL_CAPACITY_ACTION_INCREASE,ApiVars.POOL_CAPACITY_ACTION_DECREASE]
      */
@@ -37,7 +37,7 @@ public class RequestChangeCapacityPool {
     public RequestChangeCapacityPool() {
     }
 
-    public RequestChangeCapacityPool(String poolId, String sourceSymbol, BigDecimal sourceAmount, String capacityAction) {
+    public RequestChangeCapacityPool(String poolId, String sourceSymbol, String sourceAmount, String capacityAction) {
         this.poolId = poolId;
         this.sourceSymbol = sourceSymbol;
         this.sourceAmount = sourceAmount;
@@ -60,11 +60,11 @@ public class RequestChangeCapacityPool {
         this.sourceSymbol = sourceSymbol;
     }
 
-    public BigDecimal getSourceAmount() {
+    public String getSourceAmount() {
         return sourceAmount;
     }
 
-    public void setSourceAmount(BigDecimal sourceAmount) {
+    public void setSourceAmount(String sourceAmount) {
         this.sourceAmount = sourceAmount;
     }
 

@@ -1,6 +1,6 @@
 package io.planx.api.model.response;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -46,7 +46,7 @@ public class ResponseGiftSourceDetail {
     /**
      * Number of tokens for a single Gift
      */
-    private BigDecimal priceAmount;
+    private String priceAmount;
     /**
      * Quantity issued
      */
@@ -137,11 +137,11 @@ public class ResponseGiftSourceDetail {
         this.quantity = quantity;
     }
 
-    public BigDecimal getPriceAmount() {
+    public String getPriceAmount() {
         return priceAmount;
     }
 
-    public void setPriceAmount(BigDecimal priceAmount) {
+    public void setPriceAmount(String priceAmount) {
         this.priceAmount = priceAmount;
     }
 

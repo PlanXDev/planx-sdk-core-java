@@ -1,7 +1,7 @@
 package io.planx.api.model.response;
 
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -36,11 +36,11 @@ public class ResponseNewOrder {
     /**
      * Target token actual usage amount
      */
-    private BigDecimal originalAmount;
+    private String originalAmount;
     /**
      * Target token usage amount
      */
-    private BigDecimal amount;
+    private String amount;
     /**
      * The 10-digit second-level timestamp of this operation
      */
@@ -94,19 +94,19 @@ public class ResponseNewOrder {
         this.orderStatus = orderStatus;
     }
 
-    public BigDecimal getOriginalAmount() {
+    public String getOriginalAmount() {
         return originalAmount;
     }
 
-    public void setOriginalAmount(BigDecimal originalAmount) {
+    public void setOriginalAmount(String originalAmount) {
         this.originalAmount = originalAmount;
     }
 
-    public BigDecimal getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(BigDecimal amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 

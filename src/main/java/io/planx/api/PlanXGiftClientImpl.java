@@ -12,7 +12,7 @@ import io.planx.api.model.response.*;
 import io.planx.api.core.common.ApiConfiguration;
 import io.planx.api.core.common.CheckParams;
 
-import java.math.BigDecimal;
+
 import java.util.List;
 
 /**
@@ -40,7 +40,7 @@ public class PlanXGiftClientImpl extends PlanXCommonClient implements PlanXGiftC
      */
     @Override
     public ResponseGiftSourceInfo sendGiftSourceInfoNew(String poolId, String giftName, String giftType, Integer quantity,
-                                                        BigDecimal priceAmount, Long expiresSeconds) {
+                                                        String priceAmount, Long expiresSeconds) {
         RequestNewTokenGiftSource giftSource=new RequestNewTokenGiftSource(poolId,giftName,giftType,
                 quantity,priceAmount,expiresSeconds);
         CheckParams.checkObjectNotNull(giftSource);

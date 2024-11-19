@@ -4,7 +4,7 @@ import io.planx.api.core.annotation.Min;
 import io.planx.api.core.annotation.NotBlank;
 import io.planx.api.core.annotation.NotNull;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -32,12 +32,12 @@ public class RequestNewInvestmentOrder {
      */
     @NotNull
     @Min(eq = false)
-    private BigDecimal targetAmount;
+    private String targetAmount;
 
     public RequestNewInvestmentOrder() {
     }
 
-    public RequestNewInvestmentOrder(String externalOrderId, String sourceSymbol, String targetSymbol, BigDecimal targetAmount) {
+    public RequestNewInvestmentOrder(String externalOrderId, String sourceSymbol, String targetSymbol, String targetAmount) {
         this.externalOrderId = externalOrderId;
         this.sourceSymbol = sourceSymbol;
         this.targetSymbol = targetSymbol;
@@ -68,11 +68,11 @@ public class RequestNewInvestmentOrder {
         this.targetSymbol = targetSymbol;
     }
 
-    public BigDecimal getTargetAmount() {
+    public String getTargetAmount() {
         return targetAmount;
     }
 
-    public void setTargetAmount(BigDecimal targetAmount) {
+    public void setTargetAmount(String targetAmount) {
         this.targetAmount = targetAmount;
     }
 }

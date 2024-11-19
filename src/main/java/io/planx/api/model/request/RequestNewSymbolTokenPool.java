@@ -5,7 +5,7 @@ import io.planx.api.core.annotation.Min;
 import io.planx.api.core.annotation.NotBlank;
 import io.planx.api.core.annotation.NotNull;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -27,18 +27,18 @@ public class RequestNewSymbolTokenPool {
      */
     @NotNull
     @Min
-    private BigDecimal sourceAmount;
+    private String sourceAmount;
     /**
      * The amount of tokens on the right
      */
     @NotNull
     @Min
-    private BigDecimal targetAmount;
+    private String targetAmount;
 
     public RequestNewSymbolTokenPool() {
     }
 
-    public RequestNewSymbolTokenPool(String sourceSymbol, String targetSymbol, BigDecimal sourceAmount, BigDecimal targetAmount) {
+    public RequestNewSymbolTokenPool(String sourceSymbol, String targetSymbol, String sourceAmount, String targetAmount) {
         this.sourceSymbol = sourceSymbol;
         this.targetSymbol = targetSymbol;
         this.sourceAmount = sourceAmount;
@@ -61,19 +61,19 @@ public class RequestNewSymbolTokenPool {
         this.targetSymbol = targetSymbol;
     }
 
-    public BigDecimal getSourceAmount() {
+    public String getSourceAmount() {
         return sourceAmount;
     }
 
-    public void setSourceAmount(BigDecimal sourceAmount) {
+    public void setSourceAmount(String sourceAmount) {
         this.sourceAmount = sourceAmount;
     }
 
-    public BigDecimal getTargetAmount() {
+    public String getTargetAmount() {
         return targetAmount;
     }
 
-    public void setTargetAmount(BigDecimal targetAmount) {
+    public void setTargetAmount(String targetAmount) {
         this.targetAmount = targetAmount;
     }
 }

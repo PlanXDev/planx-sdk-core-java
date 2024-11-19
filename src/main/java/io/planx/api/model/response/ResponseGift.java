@@ -1,6 +1,6 @@
 package io.planx.api.model.response;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -30,11 +30,11 @@ public class ResponseGift {
     /**
      * The amount of tokens on the left
      */
-    private BigDecimal sourceAmount;
+    private String sourceAmount;
     /**
      * The amount of tokens on the right
      */
-    private BigDecimal targetAmount;
+    private String targetAmount;
     /**
      * Claim token name
      */
@@ -42,7 +42,7 @@ public class ResponseGift {
     /**
      * Number of tokens received
      */
-    private BigDecimal claimAmount;
+    private String claimAmount;
     /**
      * Receive user ID
      */
@@ -109,19 +109,19 @@ public class ResponseGift {
         this.targetSymbol = targetSymbol;
     }
 
-    public BigDecimal getSourceAmount() {
+    public String getSourceAmount() {
         return sourceAmount;
     }
 
-    public void setSourceAmount(BigDecimal sourceAmount) {
+    public void setSourceAmount(String sourceAmount) {
         this.sourceAmount = sourceAmount;
     }
 
-    public BigDecimal getTargetAmount() {
+    public String getTargetAmount() {
         return targetAmount;
     }
 
-    public void setTargetAmount(BigDecimal targetAmount) {
+    public void setTargetAmount(String targetAmount) {
         this.targetAmount = targetAmount;
     }
 
@@ -133,11 +133,11 @@ public class ResponseGift {
         this.claimSymbol = claimSymbol;
     }
 
-    public BigDecimal getClaimAmount() {
+    public String getClaimAmount() {
         return claimAmount;
     }
 
-    public void setClaimAmount(BigDecimal claimAmount) {
+    public void setClaimAmount(String claimAmount) {
         this.claimAmount = claimAmount;
     }
 

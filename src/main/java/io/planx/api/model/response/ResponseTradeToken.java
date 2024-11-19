@@ -1,6 +1,6 @@
 package io.planx.api.model.response;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -30,11 +30,11 @@ public class ResponseTradeToken {
     /**
      * Number of trading tokens
      */
-    private BigDecimal amount;
+    private String amount;
     /**
      * Trading token unit price
      */
-    private BigDecimal price;
+    private String price;
     /**
      * Trade side,[ApiVars.TRADE_SIDE_BUY,ApiVars.TRADE_SIDE_SELL]
      */
@@ -89,19 +89,19 @@ public class ResponseTradeToken {
         this.counterPartyUserName = counterPartyUserName;
     }
 
-    public BigDecimal getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(BigDecimal amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 
-    public BigDecimal getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

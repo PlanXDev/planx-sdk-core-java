@@ -1,6 +1,6 @@
 package io.planx.api.model.response;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -15,11 +15,11 @@ public class ResponseBalancesBase {
     /**
      * The available balance of the account
      */
-    private BigDecimal available;
+    private String available;
     /**
      * The frozen balance of the account
      */
-    private BigDecimal frozen;
+    private String frozen;
 
     public String getSymbol() {
         return symbol;
@@ -29,19 +29,19 @@ public class ResponseBalancesBase {
         this.symbol = symbol;
     }
 
-    public BigDecimal getAvailable() {
+    public String getAvailable() {
         return available;
     }
 
-    public void setAvailable(BigDecimal available) {
+    public void setAvailable(String available) {
         this.available = available;
     }
 
-    public BigDecimal getFrozen() {
+    public String getFrozen() {
         return frozen;
     }
 
-    public void setFrozen(BigDecimal frozen) {
+    public void setFrozen(String frozen) {
         this.frozen = frozen;
     }
 }

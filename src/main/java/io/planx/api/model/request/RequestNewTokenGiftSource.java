@@ -6,7 +6,7 @@ import io.planx.api.core.annotation.Min;
 import io.planx.api.core.annotation.NotBlank;
 import io.planx.api.core.annotation.NotNull;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -40,7 +40,7 @@ public class RequestNewTokenGiftSource {
      */
     @NotNull
     @Min(eq = false)
-    private BigDecimal priceAmount;
+    private String priceAmount;
     /**
      * Expiration time.Expires after specified number of seconds
      */
@@ -51,7 +51,7 @@ public class RequestNewTokenGiftSource {
     public RequestNewTokenGiftSource() {
     }
 
-    public RequestNewTokenGiftSource(String poolId, String giftName, String giftType, Integer quantity, BigDecimal priceAmount, Long expiresSeconds) {
+    public RequestNewTokenGiftSource(String poolId, String giftName, String giftType, Integer quantity, String priceAmount, Long expiresSeconds) {
         this.poolId = poolId;
         this.giftName = giftName;
         this.giftType = giftType;
@@ -92,11 +92,11 @@ public class RequestNewTokenGiftSource {
         this.quantity = quantity;
     }
 
-    public BigDecimal getPriceAmount() {
+    public String getPriceAmount() {
         return priceAmount;
     }
 
-    public void setPriceAmount(BigDecimal priceAmount) {
+    public void setPriceAmount(String priceAmount) {
         this.priceAmount = priceAmount;
     }
 

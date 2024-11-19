@@ -1,6 +1,6 @@
 package io.planx.api.model.response;
 
-import java.math.BigDecimal;
+
 
 /**
  * @Author Todd
@@ -19,11 +19,11 @@ public class ResponseBalancesMarket {
     /**
      * The amount of tokens on the left
      */
-    private BigDecimal sourceAmount;
+    private String sourceAmount;
     /**
      * The amount of tokens on the right
      */
-    private BigDecimal targetAmount;
+    private String targetAmount;
 
     public String getSourceSymbol() {
         return sourceSymbol;
@@ -41,19 +41,19 @@ public class ResponseBalancesMarket {
         this.targetSymbol = targetSymbol;
     }
 
-    public BigDecimal getSourceAmount() {
+    public String getSourceAmount() {
         return sourceAmount;
     }
 
-    public void setSourceAmount(BigDecimal sourceAmount) {
+    public void setSourceAmount(String sourceAmount) {
         this.sourceAmount = sourceAmount;
     }
 
-    public BigDecimal getTargetAmount() {
+    public String getTargetAmount() {
         return targetAmount;
     }
 
-    public void setTargetAmount(BigDecimal targetAmount) {
+    public void setTargetAmount(String targetAmount) {
         this.targetAmount = targetAmount;
     }
 }
