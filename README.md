@@ -17,7 +17,7 @@ Here is the java version of PlanXSDK.
     <dependency>
       <groupId>io.planckx.api</groupId>
       <artifactId>planx-sdk-core-java</artifactId>
-      <version>0.1.0</version>
+      <version>1.2.0</version>
     </dependency>
 ```
 ## Example Usage
