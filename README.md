@@ -15,7 +15,7 @@ Here is the java version of PlanXSDK.
 > * Add the following Maven dependency to your project's `pom.xml`:
 ```
     <dependency>
-      <groupId>io.planckx.api</groupId>
+      <groupId>io.planx</groupId>
       <artifactId>planx-sdk-core-java</artifactId>
       <version>1.2.0</version>
     </dependency>
